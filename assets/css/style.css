@@ -157,3 +157,27 @@ h1 {
         transform: translateY(0);
     }
 }
+/*PIECES START*/
+.piece-image {
+    width: 25%;
+    text-align: left;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.chess-symbol {
+    display: inline-block;
+    font-family: "Times New Roman", serif;
+    font-size: 90px;
+    line-height: 1;
+    margin-right: 15px;
+    vertical-align: middle;
+    color: #111;
+}
+
+.piece-image strong {
+    display: inline-block;
+    font-size: 20px;
+    vertical-align: middle;
+}
+/*PIECES END*/

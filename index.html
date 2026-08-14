@@ -1,124 +1,527 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dra&iacute;od&oacute;ir&iacute; Fichille - Chess Club</title>
-    <link rel="stylesheet" href="style.css">
+
+    ```
+    <title>Draíodóirí Fichille - Chess Club</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+
+    <!-- Your Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- JavaScript -->
+    <script src="./assets/js/bootstrap.bundle.min.js" defer></script>
+    <script src="./assets/js/script.js" defer></script>
+    ```
+
 </head>
+
 <body>
 
-    <!-- Header & Navigation Menu -->
+    ```
+    <!-- ============================= -->
+    <!-- Header & Navigation -->
+    <!-- ============================= -->
+
     <header class="navbar">
+
         <div class="logo-container">
-            <!-- Updated Image Source Path -->
-            <img src="assets/logo.png" alt="Dra&iacute;od&oacute;ir&iacute; Fichille Logo" class="nav-logo">
+
+            <img src="assets/images/logo.png"
+                 alt="Draíodóirí Fichille Logo"
+                 class="nav-logo">
+
             <span class="brand-name">FICHILLE</span>
+
         </div>
+
         <nav>
+
             <ul class="nav-links">
-                <li><a href="#home" class="active" onclick="handleNavClick('home')">Home</a></li>
-                <li><a href="#about" onclick="handleNavClick('about')">About</a></li>
-                <li><a href="#timetable" onclick="handleNavClick('timetable')">Time Table</a></li>
+
+                <li>
+                    <a href="#home"
+                       class="active"
+                       onclick="handleNavClick('home')">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#about"
+                       onclick="handleNavClick('about')">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#resources"
+                       onclick="handleNavClick('resources')">
+                        Resources
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#timetable"
+                       onclick="handleNavClick('timetable')">
+                        Time Table
+                    </a>
+                </li>
+
             </ul>
 
         </nav>
+
     </header>
 
-    <div>
 
-    </div>
-    <!-- Hero / Landing Section -->
+    <!-- ============================= -->
+    <!-- Home / Hero Section -->
+    <!-- ============================= -->
+
     <section id="home" class="hero-section">
+
         <div class="hero-content">
-            <!-- Updated Image Source Path -->
-            <img src="assets/logo.png" alt="Dra&iacute;od&oacute;ir&iacute; Fichille Main Logo" class="hero-logo">
-            <h1>DRA&Iacute;OD&Oacute;IR&Iacute; FICHILLE</h1>
-            <p class="tagline">Strait&eacute;is &bull; Fiosr&uacute; &bull; Seic agus Buach</p>
+
+            <img src="assets/images/logo.png"
+                 alt="Draíodóirí Fichille Main Logo"
+                 class="hero-logo">
+
+            <h1>DRAÍODÓIRÍ FICHILLE</h1>
+
+            <p class="tagline">
+                Straitéis &bull; Fiosrú &bull; Seic agus Buach
+            </p>
+
             <p class="description">
-                Scaoil le draíocht na fichille. Cibé an bhfuil tú ag máistreacht ar straitéis, ag fiosrú beartaíocht, nó ag troid ar son seicmhait, aimsigh do phobal anseo.
+                Scaoil le draíocht na fichille.
+                Cibé an bhfuil tú ag máistreacht ar straitéis,
+                ag fiosrú beartaíocht, nó ag troid ar son seicmhait,
+                aimsigh do phobal anseo.
             </p>
-            <a href="#timetable" class="cta-button">View Time Table</a>
+
+            <a href="#timetable"
+               class="cta-button">
+                View Time Table
+            </a>
+
         </div>
+
     </section>
-    <section id="about" style="display:none;" class="hero-section">
+
+
+    <!-- ============================= -->
+    <!-- About Section -->
+    <!-- ============================= -->
+
+    <section id="about"
+             style="display:none;"
+             class="hero-section">
+
         <div class="about-content">
+
             <h2>About Draíodóirí Fichille</h2>
+
             <p>
-                Draíodóirí Fichille is a community built for chess lovers of all ages and skill levels.
-                We focus on strategy, creativity, and the joy of learning through play.
+                Draíodóirí Fichille is a community built for chess lovers
+                of all ages and skill levels.
+                We focus on strategy, creativity, and the joy of learning
+                through play.
             </p>
+
             <p>
-                Whether you're a beginner discovering the basics or an advanced player sharpening your
-                tactical edge, our club provides coaching, events, and a welcoming environment.
+                Whether you're a beginner discovering the basics or an
+                advanced player sharpening your tactical edge, our club
+                provides coaching, events, and a welcoming environment.
             </p>
+
             <h3>Our Mission</h3>
+
             <p>
-                To inspire strategic thinking, encourage curiosity, and build a strong chess community
-                across Blackrock and beyond.
+                To inspire strategic thinking, encourage curiosity,
+                and build a strong chess community across Blackrock
+                and beyond.
             </p>
+
         </div>
+
     </section>
-    <section id="timetable" style="display:none;" class="hero-section">
+
+
+    <!-- ============================= -->
+    <!-- Time Table Section -->
+    <!-- ============================= -->
+
+    <section id="timetable"
+             style="display:none;"
+             class="hero-section">
+
         <div class="timetable-content">
+
             <h2>Weekly Time Table</h2>
 
             <table class="timetable-table">
+
                 <thead>
+
                     <tr>
                         <th>Day</th>
                         <th>Time</th>
                         <th>Activity</th>
                     </tr>
+
                 </thead>
+
                 <tbody>
+
                     <tr>
                         <td>Monday</td>
                         <td>6:00 PM – 8:00 PM</td>
                         <td>Beginner Coaching</td>
                     </tr>
+
                     <tr>
                         <td>Wednesday</td>
                         <td>7:00 PM – 9:00 PM</td>
                         <td>Intermediate Strategy Workshop</td>
                     </tr>
+
                     <tr>
                         <td>Friday</td>
                         <td>6:30 PM – 9:30 PM</td>
                         <td>Club Tournament Night</td>
                     </tr>
+
                     <tr>
                         <td>Saturday</td>
                         <td>11:00 AM – 1:00 PM</td>
                         <td>Youth Chess Academy</td>
                     </tr>
+
                 </tbody>
+
             </table>
+
         </div>
+
+    </section>
+
+
+    <!-- ============================= -->
+    <!-- Chess Resources Section -->
+    <!-- ============================= -->
+
+    <section id="resources"
+             style="display:none;"
+             class="hero-section">
+
+        <div class="about-content">
+
+            <h2>Píosaí Fichille</h2>
+
+            <p class="resources-intro">
+                Tá sé chineál píosa i gcluiche fichille.
+                Tá bealach difriúil ag gach píosa chun bogadh
+                agus tá ról tábhachtach aige sa chluiche.
+            </p>
+
+
+            <!-- Bootstrap Grid -->
+
+            <div class="container chess-resources">
+
+
+                <!-- Column Headings -->
+
+                <div class="row chess-heading d-none d-md-flex">
+
+                    <div class="col-md-3 text-end">
+                        <strong>Píosa</strong>
+                    </div>
+
+                    <div class="col-md-7">
+                        <strong>Cur síos</strong>
+                    </div>
+
+                    <div class="col-md-2 text-center">
+                        <strong>Fuaimniú</strong>
+                    </div>
+
+                </div>
+
+
+                <!-- ================= -->
+                <!-- An Rí -->
+                <!-- ================= -->
+
+                <div class="row chess-piece align-items-center">
+
+                    <div class="col-12 col-md-3 piece-image">
+
+                        <div class="chess-symbol">
+                            ♔
+                        </div>
+
+                        <strong>
+                            An Rí
+                        </strong>
+
+                    </div>
+
+                    <div class="col-12 col-md-7">
+
+                        <p>
+                            Is é an rí an píosa is tábhachtaí sa chluiche.
+                            Is féidir leis bogadh cearnóg amháin i dtreo ar bith.
+                            Caithfear an rí a chosaint i gcónaí.
+                        </p>
+
+                    </div>
+
+                    <div class="col-12 col-md-2 pronunciation">
+
+                        <button type="button"
+                                class="btn btn-link"
+                                onclick="speakIrish('An Rí')">
+                            🔊 Éist
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= -->
+                <!-- An Bhanríon -->
+                <!-- ================= -->
+
+                <div class="row chess-piece align-items-center">
+
+                    <div class="col-12 col-md-3 piece-image">
+
+                        <div class="chess-symbol">
+                            ♕
+                        </div>
+
+                        <strong>
+                            An Bhanríon
+                        </strong>
+
+                    </div>
+
+                    <div class="col-12 col-md-7">
+
+                        <p>
+                            Is í an bhanríon an píosa is cumhachtaí.
+                            Is féidir léi bogadh suas, síos, ar chlé,
+                            ar dheis agus go fiarthrasna ar feadh an chláir.
+                        </p>
+
+                    </div>
+
+                    <div class="col-12 col-md-2 pronunciation">
+
+                        <button type="button"
+                                class="btn btn-link"
+                                onclick="speakIrish('An Bhanríon')">
+                            🔊 Éist
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= -->
+                <!-- An Túr -->
+                <!-- ================= -->
+
+                <div class="row chess-piece align-items-center">
+
+                    <div class="col-12 col-md-3 piece-image">
+
+                        <div class="chess-symbol">
+                            ♖
+                        </div>
+
+                        <strong>
+                            An Túr
+                        </strong>
+
+                    </div>
+
+                    <div class="col-12 col-md-7">
+
+                        <p>
+                            Is féidir leis an túr bogadh i líne dhíreach
+                            suas, síos, ar chlé nó ar dheis.
+                            Tá sé an-éifeachtach nuair a bhíonn línte
+                            oscailte ann.
+                        </p>
+
+                    </div>
+
+                    <div class="col-12 col-md-2 pronunciation">
+
+                        <button type="button"
+                                class="btn btn-link"
+                                onclick="speakIrish('An Túr')">
+                            🔊 Éist
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= -->
+                <!-- An tEaspag -->
+                <!-- ================= -->
+
+                <div class="row chess-piece align-items-center">
+
+                    <div class="col-12 col-md-3 piece-image">
+
+                        <div class="chess-symbol">
+                            ♗
+                        </div>
+
+                        <strong>
+                            An tEaspag
+                        </strong>
+
+                    </div>
+
+                    <div class="col-12 col-md-7">
+
+                        <p>
+                            Bogann an t-easpag go fiarthrasna.
+                            Fanann gach easpag ar an dath céanna cearnóige
+                            ar feadh an chluiche.
+                        </p>
+
+                    </div>
+
+                    <div class="col-12 col-md-2 pronunciation">
+
+                        <button type="button"
+                                class="btn btn-link"
+                                onclick="speakIrish('An tEaspag')">
+                            🔊 Éist
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= -->
+                <!-- An Ridire -->
+                <!-- ================= -->
+
+                <div class="row chess-piece align-items-center">
+
+                    <div class="col-12 col-md-3 piece-image">
+
+                        <div class="chess-symbol">
+                            ♘
+                        </div>
+
+                        <strong>
+                            An Ridire
+                        </strong>
+
+                    </div>
+
+                    <div class="col-12 col-md-7">
+
+                        <p>
+                            Bogann an ridire i gcruth L:
+                            dhá chearnóg i dtreo amháin agus
+                            cearnóg amháin go dtí an taobh.
+                            Is é an t-aon phíosa é atá in ann
+                            léim thar phíosaí eile.
+                        </p>
+
+                    </div>
+
+                    <div class="col-12 col-md-2 pronunciation">
+
+                        <button type="button"
+                                class="btn btn-link"
+                                onclick="speakIrish('An Ridire')">
+                            🔊 Éist
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= -->
+                <!-- An Saighdiúir -->
+                <!-- ================= -->
+
+                <div class="row chess-piece align-items-center">
+
+                    <div class="col-12 col-md-3 piece-image">
+
+                        <div class="chess-symbol">
+                            ♙
+                        </div>
+
+                        <strong>
+                            An Saighdiúir
+                        </strong>
+
+                    </div>
+
+                    <div class="col-12 col-md-7">
+
+                        <p>
+                            Bogann an saighdiúir ar aghaidh de ghnáth,
+                            ach glacann sé píosa eile go fiarthrasna.
+                            Ar a chéad ghluaiseacht, is féidir leis
+                            bogadh dhá chearnóg.
+                        </p>
+
+                    </div>
+
+                    <div class="col-12 col-md-2 pronunciation">
+
+                        <button type="button"
+                                class="btn btn-link"
+                                onclick="speakIrish('An Saighdiúir')">
+                            🔊 Éist
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Beginner Tip -->
+
+            <h3>Leid do Thosaitheoirí</h3>
+
+            <p>
+                Déan iarracht smacht a fháil ar lár an chláir
+                agus forbair do phíosaí go luath sa chluiche.
+                Ná déan dearmad do rí a choinneáil slán!
+            </p>
+
+        </div>
+
     </section>
 
 
 </body>
 </html>
-<script>
-    function handleNavClick(section) {
-        // Update active link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.classList.remove('active');
-        });
-        document.querySelector(`a[href="#${section}"]`).classList.add('active');
-
-        // Hide all sections
-        document.querySelectorAll('section').forEach(sec => {
-            sec.style.display = 'none';
-        });
-
-        // Show the selected section
-        const target = document.getElementById(section);
-        if (target) {
-            target.style.display = 'flex';
-            target.scrollIntoView({ behavior: 'smooth' });
-        }
-    }
-
-</script>
