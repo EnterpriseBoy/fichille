@@ -78,13 +78,13 @@ body {
 
 /* Hero Section Styling */
 .hero-section {
-    min-height: 100vh;
+    min-height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 100px;
     text-align: center;
-    background: linear-gradient( rgba(255,255,255,0.95), rgba(247,247,247,0.95) ), repeating-linear-gradient( 45deg, transparent, transparent 40px, rgba(195,155,75,0.03) 40px, rgba(195,155,75,0.03) 80px );
+ /*   background: linear-gradient( rgba(255,255,255,0.95), rgba(247,247,247,0.95) ), repeating-linear-gradient( 45deg, transparent, transparent 40px, rgba(195,155,75,0.03) 40px, rgba(195,155,75,0.03) 80px );*/
 }
 
 .hero-content {
