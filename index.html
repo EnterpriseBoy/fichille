@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra&iacute;od&oacute;ir&iacute; Fichille - Chess Club</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation Menu -->
+    <header class="navbar">
+        <div class="logo-container">
+            <!-- Updated Image Source Path -->
+            <img src="assets/logo.png" alt="Dra&iacute;od&oacute;ir&iacute; Fichille Logo" class="nav-logo">
+            <span class="brand-name">FICHILLE</span>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home" class="active" onclick="handleNavClick('home')">Home</a></li>
+                <li><a href="#about" onclick="handleNavClick('about')">About</a></li>
+                <li><a href="#timetable" onclick="handleNavClick('timetable')">Time Table</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <div>
+
+    </div>
+    <!-- Hero / Landing Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <!-- Updated Image Source Path -->
+            <img src="assets/logo.png" alt="Dra&iacute;od&oacute;ir&iacute; Fichille Main Logo" class="hero-logo">
+            <h1>DRA&Iacute;OD&Oacute;IR&Iacute; FICHILLE</h1>
+            <p class="tagline">Strait&eacute;is &bull; Fiosr&uacute; &bull; Seic agus Buach</p>
+            <p class="description">
+                Unleash the magic of chess. Whether you are mastering strategy, exploring tactics, or fighting for checkmate, find your community here.
+            </p>
+            <a href="#timetable" class="cta-button">View Time Table</a>
+        </div>
+    </section>
+    <section id="about" style="display:none;" class="hero-section">
+        <div class="about-content">
+            <h2>About Draíodóirí Fichille</h2>
+            <p>
+                Draíodóirí Fichille is a community built for chess lovers of all ages and skill levels.
+                We focus on strategy, creativity, and the joy of learning through play.
+            </p>
+            <p>
+                Whether you're a beginner discovering the basics or an advanced player sharpening your
+                tactical edge, our club provides coaching, events, and a welcoming environment.
+            </p>
+            <h3>Our Mission</h3>
+            <p>
+                To inspire strategic thinking, encourage curiosity, and build a strong chess community
+                across Blackrock and beyond.
+            </p>
+        </div>
+    </section>
+    <section id="timetable" style="display:none;" class="hero-section">
+        <div class="timetable-content">
+            <h2>Weekly Time Table</h2>
+
+            <table class="timetable-table">
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Time</th>
+                        <th>Activity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>6:00 PM – 8:00 PM</td>
+                        <td>Beginner Coaching</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>7:00 PM – 9:00 PM</td>
+                        <td>Intermediate Strategy Workshop</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>6:30 PM – 9:30 PM</td>
+                        <td>Club Tournament Night</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td>11:00 AM – 1:00 PM</td>
+                        <td>Youth Chess Academy</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+
+</body>
+</html>
+<script>
+    function handleNavClick(section) {
+        // Update active link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.classList.remove('active');
+        });
+        document.querySelector(`a[href="#${section}"]`).classList.add('active');
+
+        // Hide all sections
+        document.querySelectorAll('section').forEach(sec => {
+            sec.style.display = 'none';
+        });
+
+        // Show the selected section
+        const target = document.getElementById(section);
+        if (target) {
+            target.style.display = 'flex';
+            target.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+</script>
