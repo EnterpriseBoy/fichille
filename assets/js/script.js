@@ -1,5 +1,5 @@
 let currentPage = "home";
-let currentLanguage = "en";
+let currentLanguage = "ga";
 
 const languageToggle = document.getElementById("languageToggle");
 
