@@ -1,3 +1,21 @@
+let currentPage = "home";
+
+const languageToggle = document.getElementById("languageToggle");
+
+languageToggle.addEventListener("change", function () {
+
+    if (this.checked) {
+        currentLanguage = "ga";
+    } else {
+        currentLanguage = "en";
+    }
+
+    // Reload the page currently being viewed
+    if (currentPage) {
+        navigatePage(currentPage);
+    }
+});
+
 function handleNavClick(section) {
     // Update active link
     document.querySelectorAll('.nav-links a').forEach(link => {
@@ -82,6 +100,8 @@ const pages = {
 };
 
 function navigatePage(page) {
+    currentPage = page;
+
     const pageUrl = pages[page][currentLanguage];
 
     loadPage(pageUrl);
