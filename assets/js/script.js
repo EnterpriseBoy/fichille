@@ -27,3 +27,25 @@ function speakIrish(text) {
     window.speechSynthesis.cancel();
     window.speechSynthesis.speak(speech);
 }
+
+async function loadPage(page) {
+    try {
+
+        const response = await fetch(page);
+
+        if (!response.ok) {
+            throw new Error("Page could not be loaded.");
+        }
+
+        const html = await response.text();
+
+        document.getElementById("content").innerHTML = html;
+
+    } catch (error) {
+
+        console.error(error);
+
+        document.getElementById("content").innerHTML =
+            "<p>Sorry, the page could not be loaded.</p>";
+    }
+}
