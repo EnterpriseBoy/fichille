@@ -181,3 +181,57 @@ h1 {
     vertical-align: middle;
 }
 /*PIECES END*/
+
+/*LANGUAGE SWITCH START*/
+.language-switch {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.lang-label {
+    color: #555;
+}
+
+.switch {
+    position: relative;
+    width: 42px;
+    height: 22px;
+}
+
+    .switch input {
+        display: none;
+    }
+
+.slider {
+    position: absolute;
+    inset: 0;
+    background-color: #ccc;
+    border-radius: 22px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+    .slider::before {
+        content: "";
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        left: 2px;
+        top: 2px;
+        background: white;
+        border-radius: 50%;
+        transition: 0.2s;
+    }
+
+input:checked + .slider {
+    background-color: #169b62;
+}
+
+    input:checked + .slider::before {
+        transform: translateX(20px);
+    }
+/*LANGUAGE SWITCH END*/

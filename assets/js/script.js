@@ -49,3 +49,40 @@ async function loadPage(page) {
             "<p>Sorry, the page could not be loaded.</p>";
     }
 }
+
+const toggle = document.getElementById("languageToggle");
+
+toggle.addEventListener("change", () => {
+    if (toggle.checked) {
+        console.log("Irish selected");
+    } else {
+        console.log("English selected");
+    }
+});
+
+let currentLanguage = "en";
+
+const pages = {
+    home: {
+        en: "home.html",
+        ga: "home_irl.html"
+    },
+    about: {
+        en: "pages/about_eng.html",
+        ga: "pages/about_irl.html"
+    },
+    resources: {
+        en: "pages/resources_eng.html",
+        ga: "pages/resources_irl.html"
+    },
+    timetable: {
+        en: "pages/timetable_eng.html",
+        ga: "pages/timetable_irl.html"
+    }
+};
+
+function navigatePage(page) {
+    const pageUrl = pages[page][currentLanguage];
+
+    loadPage(pageUrl);
+}

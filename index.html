@@ -44,30 +44,41 @@
         <nav>
             <ul class="nav-links">
                 <li>
-                    <a href="#" onclick="loadPage('home.html'); return false;">
+                    <a href="#" onclick="navigatePage('home'); return false;">
                         Home
                     </a>
                 </li>
 
                 <li>
-                    <a href="#" onclick="loadPage('pages/about_irl.html'); return false;">
+                    <a href="#" onclick="navigatePage('about'); return false;">
                         About
                     </a>
                 </li>
 
                 <li>
-                    <a href="#" onclick="loadPage('pages/resources.html'); return false;">
+                    <a href="#" onclick="navigatePage('resources'); return false;">
                         Resources
                     </a>
                 </li>
 
                 <li>
-                    <a href="#" onclick="loadPage('pages/timetable.html'); return false;">
+                    <a href="#" onclick="navigatePage('timetable'); return false;">
                         Time Table
                     </a>
                 </li>
             </ul>
         </nav>
+
+        <div class="language-switch">
+            <span class="lang-label">EN</span>
+
+            <label class="switch">
+                <input type="checkbox" id="languageToggle">
+                <span class="slider"></span>
+            </label>
+
+            <span class="lang-label">GA</span>
+        </div>
 
     </header>
     <main id="content">
