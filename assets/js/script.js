@@ -1,6 +1,48 @@
 let currentPage = "home";
+let currentLanguage = "en";
 
 const languageToggle = document.getElementById("languageToggle");
+
+const pages = {
+    home: {
+        en: "home.html",
+        ga: "home_irl.html"
+    },
+
+    about: {
+        en: "pages/about_eng.html",
+        ga: "pages/about_irl.html"
+    },
+
+    resources: {
+        en: "pages/resources_eng.html",
+        ga: "pages/resources_irl.html"
+    },
+
+    timetable: {
+        en: "pages/timetable_eng.html",
+        ga: "pages/timetable_irl.html"
+    }
+};
+
+
+// =============================
+// Navigation
+// =============================
+
+function navigatePage(page) {
+
+    currentPage = page;
+
+    const pageUrl = pages[page][currentLanguage];
+
+    loadPage(pageUrl);
+}
+
+
+// =============================
+// Language Switch
+// =============================
 
 languageToggle.addEventListener("change", function () {
 
@@ -10,43 +52,17 @@ languageToggle.addEventListener("change", function () {
         currentLanguage = "en";
     }
 
-    // Reload the page currently being viewed
-    if (currentPage) {
-        navigatePage(currentPage);
-    }
+    // Reload the current page in the new language
+    navigatePage(currentPage);
 });
 
-function handleNavClick(section) {
-    // Update active link
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.classList.remove('active');
-    });
-    document.querySelector(`a[href="#${section}"]`).classList.add('active');
 
-    // Hide all sections
-    document.querySelectorAll('section').forEach(sec => {
-        sec.style.display = 'none';
-    });
-
-    // Show the selected section
-    const target = document.getElementById(section);
-    if (target) {
-        target.style.display = 'flex';
-        target.scrollIntoView({ behavior: 'smooth' });
-    }
-}
-
-function speakIrish(text) {
-    const speech = new SpeechSynthesisUtterance(text);
-
-    speech.lang = "ga-IE";
-    speech.rate = 0.8;
-
-    window.speechSynthesis.cancel();
-    window.speechSynthesis.speak(speech);
-}
+// =============================
+// Load Page
+// =============================
 
 async function loadPage(page) {
+
     try {
 
         const response = await fetch(page);
@@ -68,41 +84,45 @@ async function loadPage(page) {
     }
 }
 
-const toggle = document.getElementById("languageToggle");
 
-toggle.addEventListener("change", () => {
-    if (toggle.checked) {
-        console.log("Irish selected");
-    } else {
-        console.log("English selected");
-    }
-});
+// =============================
+// Irish Pronunciation
+// =============================
 
-let currentLanguage = "en";
+function speakIrish(text) {
 
-const pages = {
-    home: {
-        en: "home.html",
-        ga: "home_irl.html"
-    },
-    about: {
-        en: "pages/about_eng.html",
-        ga: "pages/about_irl.html"
-    },
-    resources: {
-        en: "pages/resources_eng.html",
-        ga: "pages/resources_irl.html"
-    },
-    timetable: {
-        en: "pages/timetable_eng.html",
-        ga: "pages/timetable_irl.html"
-    }
-};
+    const speech = new SpeechSynthesisUtterance(text);
 
-function navigatePage(page) {
-    currentPage = page;
+    speech.lang = "ga-IE";
+    speech.rate = 0.8;
 
-    const pageUrl = pages[page][currentLanguage];
-
-    loadPage(pageUrl);
+    window.speechSynthesis.cancel();
+    window.speechSynthesis.speak(speech);
 }
+
+
+// =============================
+// English Pronunciation
+// =============================
+
+function speakEnglish(text) {
+
+    const speech = new SpeechSynthesisUtterance(text);
+
+    speech.lang = "en-IE";
+    speech.rate = 0.8;
+
+    window.speechSynthesis.cancel();
+    window.speechSynthesis.speak(speech);
+}
+
+
+// =============================
+// Load Home Page
+// =============================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    loadPage(pages.home.en);
+
+});
