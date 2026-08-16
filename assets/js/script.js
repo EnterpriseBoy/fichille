@@ -5,8 +5,8 @@ const languageToggle = document.getElementById("languageToggle");
 
 const pages = {
     home: {
-        en: "home_eng.html",
-        ga: "home_irl.html"
+        en: "pages/home_eng.html",
+        ga: "pages/home_irl.html"
     },
 
     about: {
