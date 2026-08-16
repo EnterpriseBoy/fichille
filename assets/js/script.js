@@ -66,7 +66,7 @@ async function loadPage(page) {
     try {
 
         const response = await fetch(page);
-
+        console.log(page)
         if (!response.ok) {
             throw new Error("Page could not be loaded.");
         }
