@@ -19,9 +19,9 @@ const pages = {
         ga: "pages/resources_irl.html"
     },
 
-    timetable: {
-        en: "pages/timetable_eng.html",
-        ga: "pages/timetable_irl.html"
+    contact: {
+        en: "pages/contact_eng.html",
+        ga: "pages/contact_eng.html"
     }
 };
 
@@ -31,11 +31,8 @@ const pages = {
 // =============================
 
 function navigatePage(page) {
-
     currentPage = page;
-
     const pageUrl = pages[page][currentLanguage];
-
     loadPage(pageUrl);
 }
 
@@ -45,7 +42,7 @@ function navigatePage(page) {
 // =============================
 
 languageToggle.addEventListener("change", function () {
-
+ 
     if (this.checked) {
         currentLanguage = "ga";
     } else {
@@ -62,9 +59,7 @@ languageToggle.addEventListener("change", function () {
 // =============================
 
 async function loadPage(page) {
-
     try {
-
         const response = await fetch(page);
         console.log(page)
         if (!response.ok) {
@@ -123,6 +118,6 @@ function speakEnglish(text) {
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    loadPage(pages.home.en);
+    loadPage(pages.home.ga);
 
 });
